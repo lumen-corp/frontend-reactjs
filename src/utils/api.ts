@@ -1,7 +1,7 @@
-import Config from '@config';
-import Client from '@utils/client';
-import { LocalStorage } from '@utils/storage';
-import { createAuthorizationHeader, createUrl } from '@utils/utils';
+import Config from 'config';
+import Client from 'utils/client';
+import { LocalStorage } from 'utils/storage';
+import { createAuthorizationHeader, createUrl } from 'utils/utils';
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 type ApiOptions = {
