@@ -26,7 +26,6 @@ Open [T-PROJECT PRD](https://docs.google.com/document/d/1jOE3vxcxue-m6UlXKN-_vhd
 	├── .gitignore              
 	├── README.md              
 	├── craco.config.js              
-	├── package-lock.json              
 	├── package.json              
 	├── tailwind.config.js
 	├── tsconfig.json
