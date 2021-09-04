@@ -14,7 +14,7 @@ Open [T-PROJECT PRD](https://docs.google.com/document/d/1jOE3vxcxue-m6UlXKN-_vhd
 
 # Folder Structure 
 .
-
+Frontend-reactjs
 ├── github                  # Github issue and PR templates
 ├── public                  # contains index.html, robots.txt, manifest.json, etc    
 ├── src                     # Source files (alternatively `lib` or `app`)
@@ -24,8 +24,14 @@ Open [T-PROJECT PRD](https://docs.google.com/document/d/1jOE3vxcxue-m6UlXKN-_vhd
 │   └── pages               # Route-level components
 │   └── requests            # API calls or websocket interactions
 │   └── utils               # Snippets for use throughout the application.
-└── ...
-
+├── .gitignore              
+├── README.md              
+├── craco.config.js              
+├── package-lock.json              
+├── package.json              
+├── tailwind.config.js
+├── tsconfig.json
+├── yarn.lock
 
 ## Available Scripts
 
