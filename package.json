@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@craco/craco": "^6.2.0",
 		"@testing-library/jest-dom": "^5.11.4",
 		"@testing-library/react": "^11.1.0",
 		"@testing-library/user-event": "^12.1.10",
@@ -20,12 +21,11 @@
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"start": "npm run watch:css && react-scripts start",
-		"build": "npm run watch:css && react-scripts build",
-		"test": "react-scripts test",
+		"start": "craco start",
+		"build": "craco build",
+		"test": "craco test",
 		"eject": "react-scripts eject",
-		"generate:model": "openapi-typescript specs/schema.json --output schema.ts",
-		"watch:css": "postcss src/styles/tailwind.css -o src/styles/main.css"
+		"generate:model": "openapi-typescript specs/schema.json --output schema.ts"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -46,9 +46,8 @@
 		]
 	},
 	"devDependencies": {
-		"autoprefixer": "9.8.6",
-		"postcss": "^8.3.6",
-		"postcss-cli": "^8.3.1",
-		"tailwindcss": "^2.2.9"
+		"autoprefixer": "^9",
+		"postcss": "^7",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat"
 	}
 }
