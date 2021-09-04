@@ -12,17 +12,17 @@ We’ll know this is true when individuals and organizationsns prefer to make us
 
 Open [T-PROJECT PRD](https://docs.google.com/document/d/1jOE3vxcxue-m6UlXKN-_vhd_-jpEyKlXLVf4n2aDVR4/edit) to see more.
 
-# Folder Structure 
+## Folder Structure 
 .
 Frontend-reactjs
-├── github                  # Github issue and PR templates
+├── .github                  # Github issue and PR templates
 ├── public                  # contains index.html, robots.txt, manifest.json, etc    
 ├── src                     # Source files (alternatively `lib` or `app`)
 │   ├── assets              # Media assets, such as images and videos, etc 
 │   ├── components          # Presentational/Stateless Components 
 │   ├── containers          # Contains all the Stateful Components
-│   └── pages               # Route-level components
-│   └── requests            # API calls or websocket interactions
+│   ├── pages               # Route-level components
+│   ├── requests            # API calls or websocket interactions
 │   └── utils               # Snippets for use throughout the application.
 ├── .gitignore              
 ├── README.md              
@@ -31,7 +31,7 @@ Frontend-reactjs
 ├── package.json              
 ├── tailwind.config.js
 ├── tsconfig.json
-├── yarn.lock
+└── index.js
 
 ## Available Scripts
 
