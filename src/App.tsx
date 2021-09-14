@@ -1,7 +1,6 @@
-import Home from 'pages/Home';
-import React from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
-
+import Home from "pages/Home";
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 function App() {
   const queryClient = new QueryClient();

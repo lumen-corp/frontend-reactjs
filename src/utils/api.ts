@@ -1,14 +1,14 @@
-import Config from 'config';
-import Client from 'utils/client';
-import { LocalStorage } from 'utils/storage';
-import { createAuthorizationHeader, createUrl } from 'utils/utils';
-import { AxiosRequestConfig, AxiosResponse } from 'axios';
+import Config from "config";
+import Client from "utils/client";
+import { LocalStorage } from "utils/storage";
+import { createAuthorizationHeader, createUrl } from "utils/utils";
+import { AxiosRequestConfig, AxiosResponse } from "axios";
 
 type ApiOptions = {
   requiresAuthentication?: boolean;
-  body?: AxiosRequestConfig['data'];
+  body?: AxiosRequestConfig["data"];
   headers?: Record<string, string>;
-  method?: AxiosRequestConfig['method'];
+  method?: AxiosRequestConfig["method"];
   queryParams?: Record<string, string>;
 };
 
@@ -22,12 +22,15 @@ export class Api {
   private apiUrl = Config.ApiUrl;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  async request<T = any>(uri: string, options: ApiOptions = {}): Promise<AxiosResponse<T>> {
+  async request<T = any>(
+    uri: string,
+    options: ApiOptions = {}
+  ): Promise<AxiosResponse<T>> {
     const {
       requiresAuthentication,
       body: data,
       headers = {},
-      method = 'get',
+      method = "get",
       queryParams,
     } = options;
     const url = createUrl(uri, this.apiUrl, queryParams);
