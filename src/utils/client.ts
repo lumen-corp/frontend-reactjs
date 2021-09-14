@@ -1,13 +1,14 @@
-import Config from 'config';
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
-
+import Config from "config";
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 
 const v1Api = axios.create({ baseURL: Config.ApiUrl });
 
 type MaybeRetriedRequest = AxiosRequestConfig & { _retry?: boolean };
 export type InterceptedError = AxiosError & { _shouldExit?: boolean };
 
-async function responseInterceptor(error: AxiosError<{ msg?: string }>): Promise<AxiosResponse> {
+async function responseInterceptor(
+  error: AxiosError<{ msg?: string }>
+): Promise<AxiosResponse> {
   const originalRequest = error.config as MaybeRetriedRequest;
   const { data, status } = error.response || {};
 
